@@ -53,6 +53,8 @@ include $(E3_REQUIRE_CONFIG)/DECOUPLE_FLAGS
 # APPDB:=$(APP)/Db
 # APPSRC:=$(APP)/src
 
+APP:=fimscbApp
+APPDB:=$(APP)/Db
 
 # USR_INCLUDES += -I$(where_am_I)$(APPSRC)
 
@@ -68,6 +70,8 @@ include $(E3_REQUIRE_CONFIG)/DECOUPLE_FLAGS
 # TEMPLATES += $(wildcard $(APPDB)/*.proto)
 # TEMPLATES += $(wildcard $(APPDB)/*.template)
 
+TEMPLATES += $(APPDB)/fimscb.db
+TEMPLATES += $(APPDB)/fimscb.proto
 
 # DBDINC_SRCS += $(APPSRC)/swaitRecord.c
 # DBDINC_SRCS += $(APPSRC)/sseqRecord.c
